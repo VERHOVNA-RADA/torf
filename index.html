@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>True or False?</title>
+    <meta name="author" content="Bogdan Grishin">
+    <meta name="og:description" content="Check text for True or False (for JS)">
+    <meta property="og:title" content="Is the text true on JS or false?">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="tittles">
+            <h1 class="tittle"><span id="true">True</span> or <span id="false">False</span>?</h1>
+            <h3 class="subtittle"><span class="span_subtittle">boolean</span> text tester for JS</h3>
+        </div>
+        <div class="controllers">
+            <input type="text" placeholder="Enter text for check" id="input">
+            <button onclick="getTrueOrFalse()" type="submit">Test</button>
+        </div>
+        <div class="types">
+            <input type="checkbox" name="type" id="string" onclick="changeStatus('string')">
+            <label for="string">String</label>
+            <input type="checkbox" name="type" id="number" onclick="changeStatus('number')">
+            <label for="number">Number</label>
+            <input type="checkbox" name="type" id="logic" onclick="changeStatus('logic')">
+            <label for="logic">Logic value <span>(undefined, NaN, {}, [], etc.)</span></label>
+        </div>
+        <div class="answer">
+            <h1 id="answer"></h1>
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
